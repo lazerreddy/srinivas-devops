@@ -1,0 +1,49 @@
+ wget  https://packages.chef.io/files/stable/chefdk/1.5.0/el/6/chefdk-1.5.0-1.el6.x86_64.rpm
+    2  ls
+    3  rpm -ivh chefdk-1.5.0-1.el6.x86_64.rpm
+    4  ls
+    5  cd /home/ec2-user/
+    6  ls
+    7  unzip chef-starter.zip
+    8  ls
+    9  rm -rf chef-starter.zip
+   10  ls
+   11  cd chef-repo
+   12  ls
+   13  cd cookbooks
+   14  ls
+   15  knife cookbook craete sri
+   16  ls
+   17  knife cookbook craete sri
+   18  knife cookbook create sri
+   19  ls
+   20  cd sri
+   21  ls
+   22  cdd recipe
+   23  ls
+   24  cd recipes
+   25  ls
+   26  vi default.rb
+   27  knife cookbook upload sri
+   28  knife bootstrap 18.191.214.130 --sudo -x ec2-user -i /home/ec2-user/smykey.pem -N "node2"
+   29  knife node run_list add node2 recipe["sri"]
+   30  vi default.rb
+   31  knife cookbook upload sri
+   32  vi default.rb
+   33  knife cookbook upload sri
+   34  vi default.rb
+   35  history
+
+HTTPD PACKAGE:
+package "httpd" do
+    action :install
+end
+
+service "httpd" do
+   action :start
+end
+file '/var/www/html/index.html' do
+action :create
+content "<h1>first file</h1>"
+end
+
