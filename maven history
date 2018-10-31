@@ -1,0 +1,45 @@
+    1  ls
+    7  cd /home/ec2-user/
+           jdk-11.0.1_linux-x64_bin.tar.gz   (JDK SOFTWARE MANDITARY)
+    8  ls
+    9  tar -xvf jdk-11.0.1_linux-x64_bin.tar.gz
+   10  ls
+   11  cd jdk-11.0.1
+   12  ls
+   13  pwd
+   14  vi /etc/profile.d/jdk11.sh                (JAVA ENVIRONMENT VARIABLES)
+               export JAVA_HOME=/home/ec2-user/jdk-11.0.1
+               export PATH=${JAVA_HOME}/bin:${PATH}
+
+   15  source /etc/profile.d/jdk11.sh
+   16  java --version
+   17  cd ..
+   18  ls
+   19  mkdir maven
+   20  ls
+   21  cd maven
+   22  wget http://mirrors.wuchna.com/apachemirror/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
+   23  ls
+   24  tar -xvf apache-maven-3.5.4-bin.tar.gz
+   25  ls
+   26  cd apache-maven-3.5.4
+   27  ls
+   28  pwd
+   29  vi /etc/profile.d/maven.sh               (MAVEN ENVIRONMENT VARIABLES)
+             export M2_HOME=/home/ec2-user/jdk-11.0.1
+             export PATH=${M2_HOME}/bin:${PATH}
+
+   30  source /etc/profile.d/maven.sh
+   31  mvn --version
+   32  cd ..
+   33  mkdir mvn
+   34  cd mvn/
+   35  mvn archetype:generate
+   36  ls
+   37  cd venu/
+   38  ls
+   39  mvn package         (THEN EXECUTABLE FILE CREATED EITHER .JAR .WAR .RAR)
+   40  ls
+   41  cd target/
+   42  ls
+   43  history
