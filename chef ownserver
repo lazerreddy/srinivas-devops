@@ -1,0 +1,18 @@
+1  wget https://packages.chef.io/files/stable/chef-server/12.17.33/ubuntu/16.04/chef-server-core_12.17.33-1_amd64.deb    (chef DK url path copy from browser
+    2  ls
+    3  dpkg -i chef-server-core_12.17.33-1_amd64.deb            
+    4  ls
+    5  chef-server-ctl reconfigure                              (sources run the chef background purpose)                              
+    6  chef-server-ctl status
+    7  mkdir .chef
+    8  ls
+   10  chef-server-ctl user-create admin admin admin admin@example.com examplepass -f admin.pem (create admin user purpose)
+   11  ls
+   12  chef-server-ctl org-create digitalocean "Digitalocean, Inc." --association_user admin -f digitalocean-validator.pem   (create organizations)
+   13  ls
+   14  apt-get update
+   15  chef-server-ctl install opscode-manage   (ypu want to acess chef graphical) then owenser ip addredd hid in browser
+   16  chef-server-ctl install chef-manage      (this cmd have in chaef manage)
+   17  chef-server-ctl reconfigure              (this cmd have in chaef manage)
+   18  chef-manage-ctl reconfigure              (this cmd have in chaef manage)  (then refresh in browser)
+   19  history
